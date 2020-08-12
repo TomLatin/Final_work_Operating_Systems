@@ -30,12 +30,12 @@ int main(int argc,char* argv[])
 
     if (signal(SIGINT, sigint_handler) == SIG_ERR)
     {
-        printf("Error while installing a signal handler.\n");
+        printf("Error while execute the signal handler.\n");
         exit(EXIT_FAILURE);
     }
     else if(signal(SIGUSR1, sigusr1_handler) == SIG_ERR)
     {
-        printf("Error while installing a signal handler.\n");
+        printf("Error while execute the signal handler.\n");
         exit(EXIT_FAILURE);
     }
 

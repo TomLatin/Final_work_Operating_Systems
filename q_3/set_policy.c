@@ -25,10 +25,10 @@ struct sched_attr {
     uint64_t sched_period;
 };
 
- int sched_setattr(pid_t pid, const struct sched_attr *attr, unsigned int flags)
- {
-     return syscall(__NR_sched_setattr, pid, attr, flags);
- }
+int sched_setattr(pid_t pid, const struct sched_attr *attr, unsigned int flags)
+{
+    return syscall(__NR_sched_setattr, pid, attr, flags);
+}
 
 int main(int argc, char *argv[])
 {
@@ -70,5 +70,5 @@ int main(int argc, char *argv[])
     }
 
     printf("the pid is:%d\n",getpid());
-    while(1);
+    getchar(); //to keep alive, foe end the program enter a character.
 }
